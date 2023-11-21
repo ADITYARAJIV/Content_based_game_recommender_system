@@ -15,11 +15,12 @@ selected_game_name = st.selectbox(
 if st.button('recommend'):
     try:
         recommendations = recommendation_system(selected_game_name, game)
+        recommendations = recommendations.values
         '''
         for game_name in list(recommendations):
             st.text(game_name)
         '''
-        df = pd.DataFrame(recommendations, columns = ['Game_names'])
+        df = pd.DataFrame(recommendations, columns = ['Game_names'], ignore_index = True)
         st.table(df)
     except Exception as e:
         st.write(e)
