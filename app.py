@@ -19,7 +19,7 @@ if st.button('recommend'):
         for game_name in list(recommendations):
             st.write(game_name)
         '''
-        st.write(pd.DataFrame(recommendations, columns = ['Game_names']))
+        st.write(pd.DataFrame(recommendations.tolist(), columns = ['Game_names']))
     except Exception as e:
         st.write(e)
         st.write('No recommendations')
