@@ -20,7 +20,7 @@ if st.button('recommend'):
         for game_name in list(recommendations):
             st.text(game_name)
         '''
-        df = pd.DataFrame(recommendations, columns = ['Game_names'], ignore_index = True)
+        df = pd.DataFrame(recommendations, columns = ['Game_names'])
         st.table(df)
     except Exception as e:
         st.write(e)
