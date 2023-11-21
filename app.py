@@ -14,7 +14,7 @@ selected_game_name = st.selectbox(
 
 if st.button('recommend'):
     try:
-        recommedations = recommendation_system(selected_game_name, game.head(5000))
+        recommendations = recommendation_system(selected_game_name, game)
         for game_name in recommendations:
             st.write(game_name)
     except Exception as e:
