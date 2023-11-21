@@ -1,4 +1,6 @@
 import pandas as pd
+import pickle
+import streamlit as st
 from game_recommender_engine import recommendation_system
 
 games_dict = pickle.load(open('games_dict.pkl', 'rb'))
